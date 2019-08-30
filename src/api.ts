@@ -1,4 +1,4 @@
-export const getData = (gender: string) =>
+export const findMate = (gender: string) =>
   fetch(`https://randomuser.me/api?gender=${gender}`)
     .then(response => response.json())
     .then(response => {

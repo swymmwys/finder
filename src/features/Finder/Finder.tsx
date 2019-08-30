@@ -1,8 +1,8 @@
 import { connect, MapStateToProps } from "react-redux";
 import { Finder, State, Gender } from "../../store/types";
 import React, { FormEvent } from "react";
-import { FindButton } from "../../components/FindButton/FindButton";
-import { InfoArea } from "../../components/InfoArea/InfoArea";
+import { FindButton } from "./FindButton/FindButton";
+import { InfoArea } from "./InfoArea/InfoArea";
 import { FinderActionCreators } from "../../store/actions";
 
 const mapStateToProps: MapStateToProps<Finder, {}, State> = state => {

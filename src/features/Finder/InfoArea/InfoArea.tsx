@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import React from "react";
-import { Dictionary } from "../../store/types";
+import { Dictionary } from "../../../store/types";
 
 const StyledDiv = styled.div`
   padding: 1em;

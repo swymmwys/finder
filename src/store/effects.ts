@@ -1,4 +1,4 @@
-import { getData } from "./../api";
+import { findMate } from "./../api";
 import { takeLatest, call, put } from "redux-saga/effects";
 import { FinderActionCreators, FinderActions } from "./actions";
 import { Dictionary } from "./types";
@@ -8,7 +8,7 @@ export function* findMateEffect(action: ReturnType<typeof FinderActionCreators.f
   yield put(FinderActionCreators.changeContent(null));
 
   try {
-    const content: Dictionary = yield call(getData, action.payload);
+    const content: Dictionary = yield call(findMate, action.payload);
     yield put(FinderActionCreators.changeContent(content));
     yield put(FinderActionCreators.findMateProgress(false));
   } catch (exception) {
