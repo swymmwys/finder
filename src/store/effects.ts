@@ -1,9 +1,11 @@
-import { findMate } from "./../api";
-import { takeLatest, call, put } from "redux-saga/effects";
+import { findMate } from "../api";
+import { call, put, takeLatest } from "redux-saga/effects";
 import { FinderActionCreators, FinderActions } from "./actions";
 import { Dictionary } from "./types";
 
-export function* findMateEffect(action: ReturnType<typeof FinderActionCreators.findMate>): any {
+export function* findMateEffect(
+  action: ReturnType<typeof FinderActionCreators.findMate>
+): any {
   yield put(FinderActionCreators.findMateProgress(true));
   yield put(FinderActionCreators.changeContent(null));
 

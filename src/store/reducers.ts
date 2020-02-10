@@ -17,11 +17,11 @@ const finderReducer = createReducer<Finder, FinderActionTypes>({
     ...state,
     error: action.payload
   }))
-  .handleAction(FinderActions.FIND_MATE_PROGRESS, (state, action) => ({
+  .handleAction(FinderActions.FIND_MATE_PROGRESS, (state, {payload}) => ({
     ...state,
-    progress: action.payload,
-    error: action.payload && state.error ? state.error : "",
-    findButtonAvailable: !action.payload,
+    progress: payload,
+    error: payload && state.error ? state.error : "",
+    findButtonAvailable: !payload,
   }));
 
 export const rootReducer = combineReducers<State>({

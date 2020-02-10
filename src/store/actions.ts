@@ -6,7 +6,7 @@ export enum FinderActions {
   FIND_MATE = "finder/find-mate",
   FIND_MATE_PROGRESS = "finder/find-mate-progress",
   FIND_MATE_ERROR = "finder/find-mate-error",
-};
+}
 
 export const FinderActionCreators = {
     changeContent: createAction(FinderActions.CHANGE_CONTENT, action => (content: Dictionary | null) => action(content)),
